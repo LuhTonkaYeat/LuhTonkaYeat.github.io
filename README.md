@@ -1,0 +1,69 @@
+# Личная страница — Смирнов Антон Игоревич
+
+Сайт-портфолио для домашнего задания: обо мне, учёбе, увлечениях, проектах и контактах.
+Сделан как статическая страница и рассчитан на публикацию через **GitHub Pages**.
+
+## Что использовано
+
+- **Bootstrap 5.3** (CDN) — сетка, навбар, адаптивность
+- **Bootstrap Icons** — иконки
+- **Своя тема на CSS-переменных** — тёмная и светлая темы + три цветовые схемы:
+  - фиолетово-оранжевая (по умолчанию),
+  - фиолетовая,
+  - оранжевая
+- **Google Fonts**: Unbounded (заголовки) и Manrope (текст)
+- Немного ванильного JS: переключение тем с сохранением в `localStorage`,
+  анимации появления, подсветка активного пункта меню, копирование ника
+
+Сборка не нужна — достаточно открыть `index.html` или загрузить файлы на GitHub Pages.
+
+## Структура
+
+```
+.
+├── index.html              # вся страница
+├── assets/
+│   ├── css/style.css       # тема, цвета, стили
+│   ├── js/main.js          # переключение тем и анимации
+│   └── img/
+│       ├── anton.jpg       # фото (880×1100)
+│       ├── anton.webp      # фото в webp
+│       └── favicon.svg     # иконка сайта
+├── .nojekyll               # чтобы GitHub Pages не трогал файлы через Jekyll
+└── README.md
+```
+
+## Как задеплоить на GitHub Pages
+
+1. Создай репозиторий на GitHub, например `LuhTonkaYeat.github.io`
+   (это даст адрес `https://luhtonkayeat.github.io/`).
+2. Загрузи файлы в ветку `main`:
+
+   ```bash
+   git init
+   git add .
+   git commit -m "Personal page"
+   git branch -M main
+   git remote add origin https://github.com/LuhTonkaYeat/LuhTonkaYeat.github.io.git
+   git push -u origin main
+   ```
+
+3. В репозитории: **Settings → Pages → Build and deployment**.
+   Source — `Deploy from a branch`, Branch — `main`, папка — `/ (root)`. Сохранить.
+4. Через минуту сайт будет доступен по адресу `https://luhtonkayeat.github.io/`.
+
+Если репозиторий называется иначе (например, `portfolio`), адрес будет
+`https://luhtonkayeat.github.io/portfolio/` — это тоже нормально, все пути в проекте относительные.
+
+## Как менять контент
+
+- Тексты, проекты и контакты — прямо в `index.html` (секции `about`, `interests`, `projects`, `contact`).
+- Фото — заменить `assets/img/anton.jpg` и `anton.webp` (лучше портрет 4:5, ~900×1100).
+- Цвета — переменные `--accent-1` и `--accent-2` в начале `assets/css/style.css`.
+- Светлая/тёмная тема и акцентная схема переключаются в правом верхнем углу и запоминаются в браузере.
+
+## Заметки
+
+- Если поменяешь ник или хочешь добавить почту — обнови ссылки `t.me/theG82`
+  и `github.com/LuhTonkaYeat` в `index.html` (они встречаются в hero, карточке, проектах и контактах).
+- Фото сжато для веба: 139 КБ JPEG + 98 КБ WebP.

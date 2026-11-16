@@ -37,13 +37,10 @@
 
 1. Создай репозиторий на GitHub, например `LuhTonkaYeat.github.io`
    (это даст адрес `https://luhtonkayeat.github.io/`).
-2. Загрузи файлы в ветку `main`:
+2. Локальный git-репозиторий уже создан (ветка `main`, первый коммит есть).
+   Осталось привязать его к GitHub и запушить:
 
    ```bash
-   git init
-   git add .
-   git commit -m "Personal page"
-   git branch -M main
    git remote add origin https://github.com/LuhTonkaYeat/LuhTonkaYeat.github.io.git
    git push -u origin main
    ```

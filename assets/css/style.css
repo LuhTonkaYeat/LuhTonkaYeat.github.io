@@ -671,30 +671,6 @@ p { margin-top: 0; }
   line-height: 1.6;
 }
 
-.quote-card {
-  position: relative;
-  margin-top: 30px;
-  padding: 22px 26px 22px 62px;
-  border: 1px solid var(--border);
-  border-left: 3px solid transparent;
-  border-image: linear-gradient(180deg, var(--accent-1), var(--accent-2)) 1;
-  border-radius: var(--radius-md);
-  background: var(--surface);
-}
-.quote-card i {
-  position: absolute;
-  top: 16px;
-  left: 20px;
-  font-size: 1.7rem;
-  color: var(--accent-2);
-}
-.quote-card p {
-  margin: 0;
-  color: var(--muted-strong);
-  font-size: 0.98rem;
-  font-style: italic;
-}
-
 /* Карточка с данными */
 .info-card {
   position: relative;
@@ -1069,6 +1045,8 @@ p { margin-top: 0; }
   .photo-wrap { max-width: 320px; }
   .photo-chip { left: 12px; right: 12px; bottom: 12px; padding: 10px 12px; }
   .contact-actions .btn { width: 100%; }
+  .contact-links { flex-direction: column; gap: 6px; }
+  .contact-links .sep { display: none; }
   .footer-inner { flex-direction: column; text-align: center; }
   .info-row { flex-direction: column; gap: 4px; }
   .info-row dd { text-align: left; }
